@@ -14,7 +14,7 @@ def request (url_solicitada)
     url = URI(url_solicitada) # Convierte la url en objeto URI
     response = Net::HTTP.get(url) # Realiza una solicitud GET y guarda la respuesta
     json_base =  JSON.parse(response) # Guarda la respuesta a hash
-    hash = json_base["photos"] # Convierte la respuesta a hash usando "photos" de id
+    hash = json_base["photos"] # Convierte la respuesta a hash usando "photos" de cabecera
     return hash # Devuelve el hash
 end
 
